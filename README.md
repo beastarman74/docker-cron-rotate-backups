@@ -13,6 +13,7 @@ services:
       - /pathto-backups-folder1:/backups1
       - /pathto-backups-folder2:/backups2
       - /pathto-backups-folder3:/backups3
+      # Add more backup folders if required, add them as volumes and also into the config.ini configuration file
       - /pathto/config.ini:/etc/rotate-backups.d/config.ini
     environment:
       # cron format 
