@@ -1,4 +1,4 @@
-FROM python:alpine3.21
+FROM python:alpine
 
 ENV ROTATE_CRON=""
 ENV ROTATE_OPTIONS=""
