@@ -6,8 +6,7 @@ ENV ROTATE_ADDITIONAL_OPTIONS=""
 
 RUN pip install rotate-backups
 
-#RUN mkdir /data
-
+COPY config.ini /etc/rotate-backups.d/config.ini
 COPY entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["sh", "/entrypoint.sh"]
 
