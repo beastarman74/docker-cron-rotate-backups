@@ -1,0 +1,26 @@
+services:
+  rotate:
+    image: beastarman/docker-rotate-backups
+    container_name: rotate-backups
+    volumes:
+      - /pathto-backups-folder1:/backups1
+      - /pathto-backups-folder2:/backups2
+      - /pathto-backups-folder3:/backups3
+      - /pathto/config.ini:/etc/rotate-backups.d/config.ini
+    environment:
+      # cron format 
+      ROTATE_CRON: "*/10 * * * *"
+      # additional options to pass to the command line such as verbose and dry-run, useful for testing.
+      ROTATE_OPTIONS: "--dry-run --verbose"
+      PUID: 1000
+      PGID: 1000
+      TZ: Europe/London   
+    stdin_open: true # docker run -i
+    tty: true # docker run -t      0
+    networks:
+      rotate-backups
+     
+networks:
+  rotate-backups:
+    driver: bridge
+    name: rotate-backups
