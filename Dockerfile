@@ -2,8 +2,7 @@ FROM python:alpine3.21
 
 ENV ROTATE_CRON=""
 ENV ROTATE_OPTIONS=""
-# Ensures that the python and pip executables used
-# in the image will be those from our virtualenv.
+# To ensure python and pip executables used in the image will be those from the setup virtualenv.
 ENV PATH="/venv/bin:$PATH"
 # Setup the virtualenv
 RUN python -m venv /venv
