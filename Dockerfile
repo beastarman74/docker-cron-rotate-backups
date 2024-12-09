@@ -5,7 +5,7 @@ ENV ROTATE_OPTIONS=""
 
 # Setup the virtualenv
 RUN python -m venv /venv
-RUN pip install rotate-backups
+RUN pip install --no-cache-dir rotate-backups
 
 # Ensures that the python and pip executables used
 # in the image will be those from our virtualenv.
