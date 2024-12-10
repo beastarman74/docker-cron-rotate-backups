@@ -52,21 +52,18 @@ daily = 7
 weekly = 1
 monthly = 1
 yearly = 1
-ionice = idle
 
 [/backups2]
 daily = 7
 weekly = 4
 monthly = 12
-yearly = 0
-ionice = idle
+yearly = 2
 
 [/backups3]
 daily = 7
 weekly = 4
 monthly = 2
 yearly = 1
-ionice = idle
 
 ```
 Use the `--dry-run` option using the ROTATE_OPTIONS environment variable to get the rotate-backups command to show what would be removed/kept without making any actual changes.
